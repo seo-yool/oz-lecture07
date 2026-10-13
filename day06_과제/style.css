@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+  background-color: #f7f9fb;
+  color: #1f2e3a;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d3dee6;
+}
+
+.logo {
+  font-weight: bold;
+  color: #0b6fb8;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.menu a {
+  color: #1b3f5e;
+  text-decoration: none;
+}
+
+/* 소개 영역 : 모바일은 사진 위·글 아래 */
+.intro {
+  display: flex;
+  flex-direction: column; /* TODO 1: 모바일에서 사진과 글을 위아래로 쌓는 방향 값[cite: 3] */
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.profile {
+  width: 10rem; /* TODO 2: 사진 너비 160px를 rem으로 적은 값 (160 / 16 = 10rem)[cite: 3] */
+  border-radius: 50%;
+}
+
+.lead {
+  color: #5f7280;
+}
+
+/* 태블릿 폭부터는 사진과 글을 나란히 */
+@media (min-width: 768px) {
+  /* TODO 3: 수업에서 태블릿 분기점으로 쓴 폭 (보통 768px)[cite: 3] */
+  .intro {
+    flex-direction: row; /* TODO 4: 넓은 화면에서 사진과 글을 가로로 나란히 놓는 방향 값[cite: 3] */
+    text-align: left;
+  }
+}
+
+/* 다크 모드 */
+@media (prefers-color-scheme: dark) {
+  /* TODO 5: 운영체제나 브라우저의 다크 모드 설정을 읽는 조건 이름[cite: 3] */
+  body {
+    background-color: #12222f;
+    color: #e8eff4;
+  }
+  .nav {
+    background-color: #1b3f5e;
+    border-color: #2c556f;
+  }
+  .menu a,
+  .lead {
+    color: #93b5d0;
+  } /* TODO 6: 어두운 바탕에서 잘 보이는 밝은 색 (예시 색상)[cite: 3] */
+}

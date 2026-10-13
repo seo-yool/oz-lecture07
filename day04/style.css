@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체 배경과 글자색 */
+body {
+  background-color: #f7f9fb;
+  color: #141414;
+}
+
+/* 제목 색 */
+h1 {
+  color: #0b6fb8;
+}
+
+/* class="card"가 붙은 요소 */
+.card {
+  border: 1px solid #d3dee6;
+  padding: 20px;
+}
+
+/* nav 바로 아래 a 태그만 */
+nav > a {
+  text-decoration: none;
+}
+
+/* 링크에 마우스를 올렸을 때 */
+a:hover {
+  color: #fbdf04;
+}
